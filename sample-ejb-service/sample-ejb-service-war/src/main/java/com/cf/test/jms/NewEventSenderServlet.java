@@ -18,8 +18,8 @@ import javax.servlet.http.HttpServletResponse;
  *******************************************************************************
  *----------------------------------------------------------------------------*/
 
-@WebServlet("/jmstest")
-public class EventSenderServlet extends HttpServlet {
+@WebServlet("/jmstestnew")
+public class NewEventSenderServlet extends HttpServlet {
 
     private static final long serialVersionUID = 5339733144881034101L;
 
@@ -30,7 +30,7 @@ public class EventSenderServlet extends HttpServlet {
     public void doGet(final HttpServletRequest request, final HttpServletResponse response) {
         final long num = Long.valueOf(request.getParameter("num"));
         final int size = Integer.valueOf(request.getParameter("size"));
-        sender.send(num, size);
+        sender.sendNew(num, size);
     }
 
 }
